@@ -7,7 +7,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>I'm Starting</h1>
-    <script type="text/javascript"></script>
+    <div class="main">
+        <div class="clock-image">
+            <img id="clockImage" src="images/mpho-mojapelo-I84vGUYGUtQ-unsplash-removebg-preview.png" alt="A Clock">
+        </div>
+        <div class="clock-timer-words">
+            <div id="clock"></div>
+            <div class="words">
+                <p>"Accord Purpose To Your Time Champ!!!"</p>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        function showTime() {
+    var date = new Date(); 
+    var h = date.getHours();
+    var m = date.getMinutes();
+    var s = date.getSeconds();
+    var session = "AM";
+
+    if (h >= 12) {
+        session = "PM";
+        if (h > 12) h -= 12;
+    }
+
+    if (h == 0) {
+        h = 12; 
+    }
+
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+
+    document.getElementById("clock").innerHTML = h + ":" + m + ":" + s + " " + session;
+
+    setTimeout(showTime, 1000);
+}
+        // Trigger the shake effect every 10 seconds
+        showTime();
+
+        function addShakeEffect() {
+            const clockImage = document.getElementById("clockImage");
+
+            // Add the shake class
+            clockImage.classList.add("shake");
+
+            // Remove the shake effect after the animation ends
+            setTimeout(() => {
+                clockImage.classList.remove("shake");
+            }, 500); // Match the duration of the animation (500ms)
+        }
+        setInterval(addShakeEffect, 2000);
+        // addShakeEffect()
+    </script>
 </body>
 </html>

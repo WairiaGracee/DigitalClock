@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(175, 4, 115);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures full screen height */
+}
+
+.main {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;  */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the body */
+    /* gap: 180px; */
+    position: relative;
+}
+
+/* Clock Image Styling */
+.clock-image {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 40%;
+}
+
+.clock-image img{
+    object-fit: contain;    
+}
+
+#clockImage{
+    width: 100%;
+}
+
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+.shake {
+    animation: shake 0.5s; /* Shake animation for 0.5 seconds */
+}
+
+.clock-timer-words {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column; /* Stack the timer and words vertically */
+    justify-content: center; /* Centers the timer and words vertically */
+    align-items: center; /* Centers the timer and words horizontally */
+    text-align: center; /* Centers the text inside */
+}
+
+#clock {
+    font-size: 200px; /* Adjust font size for the timer */
+    color: #fff; /* White color for the timer text */
+    margin-bottom: 1rem; /* Space between the timer and the quote */
+}
+
+.words p {
+    font-size: 40px; /* Adjust font size for the quote */
+    color: #fff; /* White color for the quote */
+}
+
+
+
+

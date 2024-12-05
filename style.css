@@ -71,11 +71,13 @@ body {
     font-size: 200px; /* Adjust font size for the timer */
     color: #7d878d; /* White color for the timer text */
     margin-bottom: 1rem; /* Space between the timer and the quote */
+    font-family: "Acme", serif;
 }
 
 .words p {
     font-size: 40px; /* Adjust font size for the quote */
     color: #71797E; /* White color for the quote */
+    font-family: "Forum", serif;
 }
 
 

@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(175, 4, 115);
+    background-color: #120a10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,9 +46,9 @@ body {
 /* Shake Animation */
 @keyframes shake {
     0% { transform: translate(0, 0); }
-    25% { transform: translate(-5px, 0); }
-    50% { transform: translate(5px, 0); }
-    75% { transform: translate(-5px, 0); }
+    25% { transform: translate(-5px, -2px); }
+    50% { transform: translate(5px, 2px); }
+    75% { transform: translate(-5px, -2px); }
     100% { transform: translate(0, 0); }
 }
 
@@ -69,13 +69,13 @@ body {
 
 #clock {
     font-size: 200px; /* Adjust font size for the timer */
-    color: #fff; /* White color for the timer text */
+    color: #7d878d; /* White color for the timer text */
     margin-bottom: 1rem; /* Space between the timer and the quote */
 }
 
 .words p {
     font-size: 40px; /* Adjust font size for the quote */
-    color: #fff; /* White color for the quote */
+    color: #71797E; /* White color for the quote */
 }
 
 
